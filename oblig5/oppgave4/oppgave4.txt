@@ -1,0 +1,5 @@
+Oppgave 4
+------------------------------
+Kjører koden med kommandoen:
+
+python oppgave4.py

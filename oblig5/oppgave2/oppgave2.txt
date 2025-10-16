@@ -1,0 +1,60 @@
+Oppgave 2
+--------------------------
+Kjører programmene med seq og BalanceChecker.java filen
+
+Kommandoer:
+seq 20 | python3 balanceArray.py | java BalanceChecker
+seq 20 | python3 balanceHeap.py | java BalanceChecker
+
+
+
+Pseudokode oppgave a:
+Funksjon print_balanced_bst(arr):
+    Definer intern funksjon inorder_print(arr, start, end):
+        Hvis start > end:
+            Returner  # basistilfelle, ingen flere elementer å behandle
+
+        midt = (start + end) // 2  # finn midtpunktet i den nåværende delen av arrayet
+
+        Print(arr[midt])  # print midtpunktet, som blir roten for dette subtreet
+
+        # rekursivt kall inorder_print for venstre subtre
+        inorder_print(arr, start, midt - 1)
+
+        # rekursivt kall inorder_print for høyre subtre
+        inorder_print(arr, midt + 1, end)
+
+    # start med hele arrayet
+    inorder_print(arr, 0, lengden av arr - 1)
+
+
+
+Pseudokode oppgave b:
+Funksjon print_balanced_bst(arr):
+    # opprett en tom prioritetskø
+    opprett tom queue (prioritetskø) 
+    
+    # legg hele arrayet (fra indeks 0 til slutten) inn i køen med negativ lengde som prioritet
+    sett inn ( -lengden_av_arr, start = 0, slutt = lengden_av_arr - 1) i køen
+    
+    # så lenge køen ikke er tom:
+    Mens køen ikke er tom:
+        
+        # hent ut (pop) området med høyest prioritet (størst lengde)
+        (negativ_lengde, start, slutt) = fjern_element_fra_kø(queue)
+        
+        # hvis start > slutt, betyr det at området er tomt
+        Hvis start > slutt:
+            fortsett til neste iterasjon (hoppe over dette området)
+        
+        # finn midtpunktet for området
+        mid = (start + slutt) // 2
+        
+        # print elementet i midten (roten i dette subtreet)
+        Print(arr[mid])
+        
+        # legg venstre subområde (start til mid - 1) tilbake i køen med negativ lengde som prioritet
+        sett inn ( -(mid - start), start, mid - 1) i køen
+        
+        # legg høyre subområde (mid + 1 til slutt) tilbake i køen med negativ lengde som prioritet
+        sett inn ( -(slutt - mid), mid + 1, slutt) i køen
