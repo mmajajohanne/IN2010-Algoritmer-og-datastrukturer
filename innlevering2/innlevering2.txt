@@ -1,0 +1,9 @@
+1.  a)
+    Kjører koden med kommandoer som disse:
+    python3 BST_set.py < inputs/eksempel_input
+    python3 BST_set.py < inputs/input_100 | cmp - outputs/output_100
+
+    b)
+    Kjører koden med kommandoer som disse:
+    python3 AVL_set.py < inputs/eksempel_input
+    python3 AVL_set.py < inputs/input_100 | cmp - outputs/output_100

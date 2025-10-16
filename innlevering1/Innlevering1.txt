@@ -1,0 +1,6 @@
+IN2010 - Innlevering 1
+a) 
+ALGORITHM: push_back(x)
+Input: Et element x som skal settes inn bakerst i køen.
+Output: Ingen (modifiserer køen).
+
